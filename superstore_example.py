@@ -578,13 +578,9 @@ def propbar(width, index, x, y):
     shapes = slide.shapes
     ##Add rectangle shape
     autoshape(shapes, MSO_SHAPE.RECTANGLE, left=Inches(x), top=Inches(y+(standard_row_height*index)), width=Inches(0.69*width), height=Inches(0.16), fill_color=secondary_color, no_border=True, shadow=False)
-    # shape = shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(x), Inches(y+(standard_row_height*index)), Inches(0.69*width), Inches(0.16))
-    # _shape_fill(shape, fill_color=secondary_color)
-    # ##Make 
-    # shape.line.fill.background()
-    # shape.shadow.inherit = False
-    # base_shape = shapes[0]._element
-    # base_shape.addprevious(shape._element)
+    ##Move rectangle behind table
+    base_shape = shapes[0]._element
+    base_shape.addprevious(shape._element)
 
 def seaborn_boxplot(slide, df, x, y, cx, cy):
     '''
