@@ -577,7 +577,7 @@ def propbar(width, index, x, y):
     '''
     shapes = slide.shapes
     ##Add rectangle shape
-    autoshape(shapes, MSO_SHAPE.RECTANGLE, left=Inches(x), top=Inches(y+(standard_row_height*index)), width=Inches(0.69*width), height=Inches(0.16), fill_color=secondary_color, no_border=True, shadow=False)
+    shape = autoshape(shapes, MSO_SHAPE.RECTANGLE, left=Inches(x), top=Inches(y+(standard_row_height*index)), width=Inches(0.69*width), height=Inches(0.16), fill_color=secondary_color, no_border=True, shadow=False)
     ##Move rectangle behind table
     base_shape = shapes[0]._element
     base_shape.addprevious(shape._element)
