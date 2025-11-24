@@ -1,0 +1,8 @@
+##Environments
+.env
+.venv
+env/
+venv/
+
+##Jupyterlab
+/.ipynb_checkpoints
